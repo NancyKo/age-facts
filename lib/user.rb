@@ -1,11 +1,9 @@
 require 'open-uri'
 require 'pry'
-require 'open-uri'
-require 'pry'
 
 class User
   
-  attr_accessor :day, :month, :year 
+attr_accessor :day, :month, :year 
 
   def initialize(month, day, year)
     @day = day 
