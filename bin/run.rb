@@ -1,21 +1,29 @@
+require 'pry'
+
 require_relative '../config/environment.rb'
 
 def run 
   
   puts "What is your birth year? (yyyy)"
   year = gets.chomp
-  validity = Validity.new(year: year)
-  validity.validity_for_year
+  inputvalidity = InputValidity.new(year: year)
+  inputvalidity.valid_input_year
+  calendarvalidity = CalendarValidity.new(year: year)
+  calendarvalidity.validity_for_year
 
   puts "What month were you born? (mm)"
   month = gets.chomp
-  validity = Validity.new(month: month)
-  validity.validity_for_month
+  inputvalidity = InputValidity.new(month: month)
+  inputvalidity.valid_input_month
+  calendarvalidity = CalendarValidity.new(month: month)
+  calendarvalidity.validity_for_month
 
-  puts "What day were you born? (dd)"
+  puts "What day of the month were you born? (dd)"
   day = gets.chomp
-  validity = Validity.new(day: day)
-  validity.validity_for_day
+  inputvalidity = InputValidity.new(day: day)
+  inputvalidity.valid_input_day
+  calendarvalidity = CalendarValidity.new(day: day, month: month)
+  calendarvalidity.validity_for_day
 
   user = User.new("#{month}","#{day}", "#{year}")
   user_extra = Age_fact.new("#{month}","#{year}")
