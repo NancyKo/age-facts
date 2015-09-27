@@ -1,6 +1,4 @@
 require 'open-uri'
-# require 'pry'
-
 class User
   
 attr_accessor :day, :month, :year 

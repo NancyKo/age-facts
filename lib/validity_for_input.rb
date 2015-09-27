@@ -1,5 +1,3 @@
-# require 'pry'
-
 class InputValidity
 
   attr_accessor :month, :day, :year

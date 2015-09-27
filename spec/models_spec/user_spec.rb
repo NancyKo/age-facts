@@ -23,5 +23,5 @@ describe User do
     expect(open("http://numbersapi.com/10/2").read).to be_a(String) 
   end
 
-  end
+end
 

@@ -1,4 +1,3 @@
-require 'pry'
 class CalendarValidity
 
   attr_accessor :month, :day, :year
@@ -29,7 +28,6 @@ class CalendarValidity
       incorrect_user_input
       end
     elsif days_30.include?(@month)
-      binding.pry
       if @day > 30 || @day < 0
         incorrect_user_input
       end
